@@ -53,4 +53,19 @@ public class JUnitShoppingCartTest{
 
         assertEquals(startBalance+2.0, cart.getBalance(), 0.0);
     }
+      //Test Case 5: Test that after removeItem(Product item), the new cart count is decremented
+    @Test
+    public void printNewNumberOfItems(){
+      ShoppingCart cart = new ShoppingCart();
+      Product milk = new Product("milk", 2.0);
+      cart.addItem(milk);
+      Product honey = new Product("honey", 2.0);
+      cart.addItem(honey);
+      int startcartcount = cart.getItemCount();
+      System.out.println("Current Cart Count = " + startcartcount);
+      cart.removeItem(milk);
+      System.out.println("New Cart Count after Milk Removal = " + cart.getItemCount());
+
+      assertEquals(startcartcount-1, cart.getItemCount());
+    }
 }
