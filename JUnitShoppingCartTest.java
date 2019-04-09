@@ -24,4 +24,17 @@ public class JUnitShoppingCartTest{
         assertEquals(0, cart.getItemCount());
     }
 
+    // Test Case 3: Test that after addItem(Product item), the number of items must be incremented
+    @Test
+    public void printNumberOfItems(){
+
+        ShoppingCart cart = new ShoppingCart();
+        System.out.println("Current Shopping Cart Size = " + cart.getItemCount());
+
+        Product milk = new Product("milk", 2);
+        cart.addItem(milk);
+        System.out.println("Shopping Cart Size = " + cart.getItemCount());
+
+        assertEquals(1, cart.getItemCount());
+    }
 }
