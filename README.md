@@ -10,3 +10,5 @@ Test Case 2: Test that a shopping cart has zero items after the method call to e
 Test Case 3: Test that adding an item will increment the item count.
 
 Test Case 4: Test that adding an item will correctly update the balance.
+
+Test Case 5: Test that removing an item will correctly update the item count.
