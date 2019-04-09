@@ -70,7 +70,9 @@ public class JUnitShoppingCartTest{
     }
     
     //Test Case 6: When a product not in the cart is removed, a ProductNotFoundException must be thrown
-   
+   public ProductNotFoundException() {
+		super();
+	
    try{
 	      ShoppingCart cart = new ShoppingCart();
 	      Product milk = new Product("milk", 2.0);
@@ -87,7 +89,7 @@ public class JUnitShoppingCartTest{
     catch (ProductNotFoundExcetion e){
       System.out.println("Failed to remove item. Item does not exist in cart!");
    }
-    
+   }
     
     
 }
