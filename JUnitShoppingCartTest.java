@@ -70,10 +70,10 @@ public class JUnitShoppingCartTest{
     }
     
     //Test Case 6: When a product not in the cart is removed, a ProductNotFoundException must be thrown
-   public ProductNotFoundException() {
-		super();
+   @Test
+    public void printNewBalance) {
 	
-   try{
+ 	  try{
 	      ShoppingCart cart = new ShoppingCart();
 	      Product milk = new Product("milk", 2.0);
 	      cart.addItem(milk);
@@ -84,11 +84,11 @@ public class JUnitShoppingCartTest{
 	      cart.removeItem(mango);
 	      fail("exception not thrown");// Product was found.
 	      System.out.println("New Cart Count after Milk Removal = " + cart.getItemCount());    
-   }
+  	 }
    
-    catch (ProductNotFoundExcetion e){
-      System.out.println("Failed to remove item. Item does not exist in cart!");
-   }
+ 	   catch (ProductNotFoundExcetion e){
+  	    System.out.println("Failed to remove item. Item does not exist in cart!");
+  	 }
    }
     
     
