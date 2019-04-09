@@ -12,3 +12,5 @@ Test Case 3: Test that adding an item will increment the item count.
 Test Case 4: Test that adding an item will correctly update the balance.
 
 Test Case 5: Test that removing an item will correctly update the item count.
+
+Test Case 6: Testing for when a product not in the cart is removed, a ProductNotFoundException must be thrown.
