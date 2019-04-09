@@ -68,4 +68,26 @@ public class JUnitShoppingCartTest{
 
       assertEquals(startcartcount-1, cart.getItemCount());
     }
+    
+    //Test Case 6: When a product not in the cart is removed, a ProductNotFoundException must be thrown
+   
+   try{
+	      ShoppingCart cart = new ShoppingCart();
+	      Product milk = new Product("milk", 2.0);
+	      cart.addItem(milk);
+	      Product honey = new Product("honey", 2.0);
+	      cart.addItem(honey);
+	      int startcartcount = cart.getItemCount();
+	      System.out.println("Current Cart Count = " + startcartcount);
+	      cart.removeItem(mango);
+	      fail("exception not thrown");// Product was found.
+	      System.out.println("New Cart Count after Milk Removal = " + cart.getItemCount());    
+   }
+   
+    catch (ProductNotFoundExcetion e){
+      System.out.println("Failed to remove item. Item does not exist in cart!");
+   }
+    
+    
+    
 }
