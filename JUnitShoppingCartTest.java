@@ -47,10 +47,10 @@ public class JUnitShoppingCartTest{
         double startBalance = cart.getBalance();
         System.out.println("Current Balance = " + cart.getBalance());
 
-        Product milk = new Product("milk", 2);
+        Product milk = new Product("milk", 2.0);
         cart.addItem(milk);
         System.out.println("New Balance = " + cart.getBalance());
 
-        assertEquals(startBalance+2, cart.getBalance());
+        assertEquals(startBalance+2.0, cart.getBalance(), 0.0);
     }
 }
