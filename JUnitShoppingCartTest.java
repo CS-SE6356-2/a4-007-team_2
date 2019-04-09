@@ -29,12 +29,28 @@ public class JUnitShoppingCartTest{
     public void printNumberOfItems(){
 
         ShoppingCart cart = new ShoppingCart();
+        int startSize = cart.getItemCount();
         System.out.println("Current Shopping Cart Size = " + cart.getItemCount());
 
         Product milk = new Product("milk", 2);
         cart.addItem(milk);
         System.out.println("Shopping Cart Size = " + cart.getItemCount());
 
-        assertEquals(1, cart.getItemCount());
+        assertEquals(startSize+1, cart.getItemCount());
+    }
+
+    // Test Case 4: Test that after addItem(Product item), the new balance must be the sum of the previous balance plus the cost of the new product
+    @Test
+    public void printNewBalance(){
+
+        ShoppingCart cart = new ShoppingCart();
+        double startBalance = cart.getBalance();
+        System.out.println("Current Balance = " + cart.getBalance());
+
+        Product milk = new Product("milk", 2);
+        cart.addItem(milk);
+        System.out.println("New Balance = " + cart.getBalance());
+
+        assertEquals(startBalance+2, cart.getBalance());
     }
 }
